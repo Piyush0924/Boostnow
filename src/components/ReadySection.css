@@ -1,0 +1,95 @@
+.ready-section {
+    background: linear-gradient(145deg, #c9c6ff, #7c64f5);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0px 0px 0 0;
+  }
+  
+  .overlay {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .graphic-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .graphic {
+    width: 150px;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .icon {
+    width: 60px;
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: white;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    flex-direction: row; /* 👈 buttons in same row */
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .book-call {
+    background: #f9f8fc; /* 👈 purple background */
+    color: rgb(122, 99, 238);
+    padding: 14px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 9999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-call:hover {
+    background: #5c46ea;
+  }
+  
+  .availability {
+    font-size: 0.95rem;
+    background: rgb(128, 111, 227);
+    color: #f7f6fd;
+    padding: 14px 30px;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: default;
+  }
+  

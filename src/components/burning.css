@@ -1,0 +1,152 @@
+/* ------------------- Background Video Setup (same as HeroSection) ------------------- */
+.burning-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* ------------------- Burning Section Styles ------------------- */
+  .burning-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: transparent;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .burning-container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .burning-subtitle {
+    letter-spacing: 0.2em;
+    color: #7c8b9e; /* soft grayish blue */
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .burning-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #3bbef6, #4b3bf6); /* light blue to indigo */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .highlight {
+    color: #3b82f6; /* Blue highlight */
+  }
+  
+  .burning-description {
+    font-size: 1.1rem;
+    color: #7a8a9e; /* soft gray text */
+    margin-bottom: 40px;
+  }
+  
+  .burning-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .faq-item {
+    background: rgba(255, 255, 255, 0.35); /* transparent white */
+    border-radius: 14px;
+    padding: 20px 25px;
+    text-align: left;
+    border: 1px solid rgba(200, 220, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: none;
+  }
+  
+  .faq-item:hover {
+    background: rgba(255, 255, 255, 0.45);
+    border-color: rgba(200, 220, 255, 0.5);
+  }
+  
+  .faq-item.open {
+    background-color: rgba(230, 240, 255, 0.5);
+    border-color: #c7d2fe;
+  }
+  
+  .faq-question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5a5e9a; /* soft indigo/blue-gray */
+  }
+  
+  .faq-answer {
+    margin-top: 10px;
+    color: #4c5a72; /* soft indigo gray */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .faq-icon {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+  }
+  
+  /* ------------------- New Styles for Assistance Section ------------------- */
+  .assistance-section {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4b4f62;
+    z-index: 1000;
+  }
+  
+  .get-assistance-button {
+    background-color: #6366f1; /* Indigo */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .get-assistance-button:hover {
+    background-color: #4f46e5;
+  }
+  

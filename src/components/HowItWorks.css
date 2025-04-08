@@ -1,0 +1,159 @@
+/* Apply Manrope font globally */
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.how-it-works-section {
+  position: relative;
+  padding: 120px 16px 100px;
+  background: linear-gradient(to bottom right, #f0f7ff, #dcf4ff);
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  font-family: 'Manrope', sans-serif;
+}
+
+.how-it-works-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.12;
+}
+
+.how-it-works-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.how-it-works-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #6963dd;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-family: 'Manrope', sans-serif;
+}
+
+.how-it-works-title span {
+  color: #0ea5e9;
+}
+
+.how-it-works-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Manrope', sans-serif;
+}
+
+.how-it-works-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 40px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.how-it-works-card {
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  backdrop-filter: blur(20px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(20px); /* Safari support */
+  border-radius: 20px;
+  padding: 40px 24px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 220px;
+  flex: 1;
+  font-family: 'Manrope', sans-serif;
+}
+
+
+.how-it-works-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+  color: #7c3aed;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.icon-wrapper {
+  background: #e0f2fe;
+  border-radius: 20px;
+  width: 64px;
+  height: 59px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon {
+  width: 36px;
+  height: 33px;
+}
+
+.step-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .how-it-works-steps {
+    padding: 0 20px;
+  }
+
+  .how-it-works-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-steps {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .how-it-works-card {
+    padding: 30px 15px;
+  }
+}

@@ -1,0 +1,188 @@
+.integration-section {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Centers the content horizontally */
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  
+}
+
+.integration-container {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  gap: 140px; /* Adjust spacing */
+}
+
+.integration-label {
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #99b2be, #8364e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+
+.integration-content {
+  justify-content: center;
+  text-align: left; /* Ensures text is left-aligned */
+  max-width: 500px; /* Restricts width for better alignment */
+  width: 100%;
+  margin-left: 200px;
+  position: relative;
+}
+
+.integration-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  /* background: linear-gradient(90deg, #00aefd, #8364e8); */
+  background: linear-gradient(90deg, #8364e8, #00aefd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.integration-content p {
+  font-size: 1.1rem;
+  color: #5a5a72;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+.integration-content .highlight {
+  color: #6a5acd;
+}
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  justify-content: center;
+  margin-right: 250px;
+}
+
+.integration-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.integration-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.integration-gif img {
+  border-radius: 15px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.integration-gif img:hover {
+  opacity: 1;
+}
+
+
+
+.platform-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 0;
+  position: relative;
+  margin-left: 190px;
+}
+
+.platform-text {
+  font-size: 1.1rem;
+  color: #5a5a72;
+  text-align: left;
+  max-width: 250px;
+  margin-top: 0px;
+  
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 100px;
+  position: relative;
+  /* margin-right: 10px; */
+}
+
+.platform-icon img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  border-radius: 10px; /* Rounded corners on images */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Optional: Subtle lines connecting icons */
+.platform-grid::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 5%;
+}
+
+
+.integration-item img:nth-child(2) {
+  margin-top: 30px; /* Adds space between pic2 and pic3 */
+}
+
+.integration-gif img:nth-child(2) {
+  margin-top: 30px; /* Adds space between gif7.gif and pic4 */
+}
+
+
+/* Section Below the Icons */
+.support-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px; /* Space between text and button */
+  margin-top: 50px;
+  margin-right: 30px;
+}
+
+/* Assistance Text */
+.support-text {
+  font-size: 1.1rem;
+  color: #5a5a72;
+  white-space: nowrap; /* Prevents text from breaking */
+}
+
+/* Instant Support Button */
+.support-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #8364e8, #00aefd);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.support-button:hover {
+  background: linear-gradient(90deg, #00aefd, #8364e8);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+} 
+
+

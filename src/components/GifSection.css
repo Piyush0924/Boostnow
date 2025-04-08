@@ -1,0 +1,40 @@
+.gif-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1); /* Lightened background */
+  padding: 50px 20px;
+}
+
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Rounded corners for all GIFs */
+.gif-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* Curved edges on all sides */
+  transition: opacity .5s ease-in-out;
+}
+
+/* Lower opacity for the last row */
+.gif-item:nth-child(n) .gif-image {
+  opacity: 1;
+}
+
+/* Soft Glow Effect */
+.gif-grid::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 80%);
+  z-index: -1;
+}

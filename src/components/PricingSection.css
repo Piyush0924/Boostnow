@@ -1,0 +1,266 @@
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: inherit; /* This keeps the same background as HeroSection */
+  }
+  
+  
+  /* Title */
+  .pricing-title {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #8364e8, #00aefd); /* Same gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+  }
+  
+  .pricing-card {
+    background: rgba(255, 255, 255, 0.5); /* Reduce background visibility */
+    opacity: 1; /* Lower the overall visibility */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 1s ease-in-out, background 1s ease-in-out;
+  }
+  
+  /* On hover, increase opacity */
+  .pricing-card:hover {
+    opacity: 1; /* Fully visible on hover */
+    background: rgba(255, 255, 255, 0.85);
+  }
+  
+  
+  
+  .pricing-subtitle {
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Toggle Switch */
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5a5a72;
+    position: relative;
+  }
+  
+  .toggle-button {
+    width: 80px;
+    height: 35px;
+    background: #ccc;
+    border-radius: 50px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-circle {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .toggle-circle.active {
+    left: 45px;
+    background: #00aefd;
+  }
+  
+  .discount-badge {
+    position: absolute;
+    top: -20px;
+    right: -40px;
+    background: #00aefd;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+  
+  /* Pricing Cards */
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  
+  .pricing-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    min-width: 270px;
+    position: relative;
+  }
+  
+  .pricing-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .plan-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .plan-features li {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .plan-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8364e8;
+    margin-bottom: 10px;
+  }
+  
+  .plan-price span {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Purchase Button */
+  .purchase-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #8364e8, #00aefd);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .purchase-btn:hover {
+    background: linear-gradient(90deg, #00aefd, #8364e8);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Trusted Companies */
+  .trusted-companies {
+    text-align: center;
+    margin-top: 50px;
+    overflow: hidden; /* Hides overflow to prevent horizontal scroll */
+    width: 100%;
+    position: relative;
+  }
+  
+  .trusted-companies span {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5a5a72;
+    margin-bottom: 30px; /* Adjust this value for more or less gap */
+  }
+
+  .logo-slider {
+    width: 60%; /* Restricts width to match pricing cards area */
+    margin: auto; /* Centers it */
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .company-logos {
+    display: flex;
+    gap: 80px;
+    animation: scroll 20s linear infinite;
+    width: max-content; /* Ensures all logos fit properly */
+  }
+  
+  .company-logos img {
+    height: 30px;
+    width: auto;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect: Increase opacity and scale */
+  .company-logos img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Keyframes for Restricted Continuous Scrolling */
+  @keyframes scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  
+  .plan-help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between text and button */
+    margin-top: 50px; /* Space below SVG section */
+  }
+  
+  .plan-help span {
+    font-size: 1.2rem;
+    color: #5a5a72;
+    font-weight: bold;
+  }
+  
+  .expert-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #8364e8, #00aefd);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .expert-button:hover {
+    background: linear-gradient(90deg, #00aefd, #8364e8);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .plan-question {
+    font-size: 1.1rem;
+    color: #5a5a72;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  

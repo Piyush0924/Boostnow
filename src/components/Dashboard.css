@@ -1,0 +1,74 @@
+.dashboard-container {
+  width: 100%;
+  min-height: 200vh; /* Increased height to enable scrolling */
+  padding: 100px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.dashboard-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #8364e8, #00aefd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-image-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s linear; /* Smooth continuous transformation */
+  opacity: 1;
+  transform-origin: center;
+}
+
+.dashboard-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 20px;
+}
+/* Static Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Wrapper for whole app */
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Content scrolls over video */
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: makes pages scroll properly */
+.hero-section, .dashboard-container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
