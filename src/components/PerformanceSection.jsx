@@ -9,41 +9,50 @@ export default function PerformanceSection() {
   ];
 
   return (
-    <section className="w-full h-screen py-16 bg-gradient-to-br from-white to-blue-50/50 overflow-hidden relative">
-     <video
+    <section className="w-full h-screen overflow-hidden relative">
+      {/* Background Video */}
+      <video
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1] "
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-2]"
       >
         <source src="/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
+      {/* Solid Gradient Overlay (No Blur) */}
+      <div
+        className="absolute top-0 left-0 w-full h-full z-[-1]"
+        
+      ></div>
 
+<h2
+  className="absolute top-8 left-10 font-bold z-20 text-[1rem] bg-gradient-to-r from-[#99b2be] to-[#8364e8] bg-clip-text text-transparent"
+>
+  PERFORMANCE
+</h2>
 
-      <div className="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row">
-        {/* Section Label */}
-       
-
+      <div className="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row h-[80%] items-center justify-center">
         {/* Middle Content */}
-        <div className="lg:w-1/2 ml-64">
-          <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-400 to-indigo-900 bg-clip-text text-transparent">
+        <div className="lg:w-3/4 mx-auto">
+          <h3 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-center">
+            <span className="bg-gradient-to-r from-cyan-200 to-indigo-800 bg-clip-text text-transparent">
               Our Milestones,
             </span>
             <br />
-            <span className="bg-gradient-to-tr from-cyan-400 to-indigo-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-tr from-cyan-200 to-indigo-800 bg-clip-text text-transparent">
               your Advantage
             </span>
           </h3>
 
-          <p className="text-gray-600 max-w-2xl text-lg mb-12">
-            Driving measurable growth worldwide with every campaign launched, user supported, and AI-driven solution delivered.
+          <p className="text-gray-800 text-lg md:text-xl text-center max-w-3xl mx-auto mb-10">
+            Driving measurable growth worldwide with every campaign launched,
+            user supported, and AI-driven solution delivered.
           </p>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {stats.map(([title, value], i) => {
               const number = value.replace(/[^\d]/g, "");
               const suffix = value.replace(/[\d]/g, "");
@@ -77,18 +86,15 @@ export default function PerformanceSection() {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 flex flex-col md:flex-row items-start md:items-center gap-4">
-            <p className="text-gray-600 max-w-md">
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-4">
+            <p className="text-gray-700 text-center max-w-md">
               Experience our analytics engine and see how we shape businesses worldwide.
             </p>
-            <button className="rounded-full w-full max-w-xs px-6 py-2 bg-[#7584D6] hover:bg-indigo-400 text-white transition-colors font-medium text-center break-words">
+            <button className="rounded-full w-full max-w-xs px-6 py-3 bg-[#7584D6] hover:bg-indigo-500 text-white transition-colors font-semibold text-center">
               Analytics Demo
             </button>
           </div>
         </div>
-
-        {/* Right Spacer */}
-        <div className="lg:w-1/4 hidden lg:block"></div>
       </div>
     </section>
   );

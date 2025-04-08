@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import "./HowItWorks.css"
 
 const steps = [
   {
@@ -35,7 +34,6 @@ const HowItWorks = () => {
   const [videoLoaded, setVideoLoaded] = useState(false)
 
   useEffect(() => {
-    // Set visible immediately for initial render
     setIsVisible(true)
 
     const onScroll = () => {
@@ -49,54 +47,69 @@ const HowItWorks = () => {
     }
 
     window.addEventListener("scroll", onScroll)
-    // Trigger once to check initial position
     onScroll()
 
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
   return (
-    <section className={`how-it-works-section ${isVisible ? "visible" : "hidden"}`}>
-      {/* Background video with event handlers to track loading */}
+    <section
+      className={`how-it-works-section relative py-20 overflow-hidden ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      } transition-all duration-700 ease-in-out`}
+    >
+      {/* Background Video */}
       <video
-  className="background-video"
-  autoPlay
-  loop
-  muted
-  playsInline
-  onLoadedData={() => setVideoLoaded(true)}
-  onError={(e) => console.error("Video failed to load:", e)}
->
-  <source src="/background.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-20"
+        autoPlay
+        loop
+        muted
+        playsInline
+        onLoadedData={() => setVideoLoaded(true)}
+        onError={(e) => console.error("Video failed to load:", e)}
+      >
+        <source src="/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <div className="how-it-works-container">
-        <h2 className="how-it-works-title">
-          <span>Explore</span> Our Simple,
-          <br /> Easy Process
-        </h2>
-        <p className="how-it-works-subtitle">
-          Start with ease and watch your business thrive from the get-go with personalized guidance every step of the
-          way
+      {/* Overlay Content */}
+      <div className="relative z-10 container mx-auto px-4 text-center">
+        <h2 className="uppercase text-indigo-600 font-semibold mb-4 tracking-wide">HOW IT WORKS</h2>
+        <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-600 text-transparent bg-clip-text mb-6">
+          Explore Our Simple, <br className="hidden md:block" /> Easy Process
+        </h3>
+        <p className="max-w-2xl mx-auto text-lg text-slate-600 mb-12">
+          Start with ease and watch your business thrive from the get-go with personalized guidance every step of the way.
         </p>
 
-        <div className="how-it-works-steps">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((item, index) => (
-            <div key={index} className="how-it-works-card">
-              <div className="step-number">{item.step}</div>
-              <div className="icon-wrapper">
-                <img src={item.icon || "/placeholder.svg"} alt={item.title} className="step-icon" />
+            <div
+              key={index}
+              className="bg-white bg-opacity-90 p-6 rounded-xl shadow-md backdrop-blur-sm transition-transform duration-300 hover:scale-105"
+            >
+              <h4 className="text-indigo-600 text-lg font-medium mb-4">{item.step}</h4>
+              <div className="h-16 w-16 mx-auto mb-4">
+                <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
               </div>
-              <h3 className="step-title">{item.title}</h3>
-              <p className="step-desc">{item.desc}</p>
+              <h5 className="text-xl font-semibold text-indigo-700 mb-2">{item.title}</h5>
+              <p className="text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
+
+        <div className="mt-20 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+  <p className="text-indigo-600 text-lg font-medium">
+    Seamless integration with expert guidance
+  </p>
+  <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-base md:text-lg font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+    Connect Now
+  </button>
+</div>
+
       </div>
     </section>
   )
 }
 
-export default HowItWorks;
-
+export default HowItWorks

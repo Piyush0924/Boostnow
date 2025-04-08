@@ -77,10 +77,7 @@ const Burning = () => {
         </div>
       </section>
 
-      <div className="assistance-section">
-        <span>Still have questions?</span>
-        <button className="get-assistance-button">Get Assistance</button>
-      </div>
+      
     </div>
   );
 };

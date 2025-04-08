@@ -9,7 +9,7 @@ const Footer = () => {
       <ScrollingBanner />
 
       <div className="text-center mt-8 mb-[-2rem]">
-  <h1 className="text-[6rem] sm:text-[8rem] lg:text-[10rem] font-extrabold text-[#7584D6] opacity-40 leading-none">
+  <h1 className="text-[6rem] sm:text-[8rem] lg:text-[11rem] font-extrabold text-[#7584D6] opacity-40 leading-none">
     BoostNowAI
   </h1>
 </div>
