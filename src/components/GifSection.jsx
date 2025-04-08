@@ -12,13 +12,21 @@ const gifs = [
 
 const GifSection = () => {
   return (
-    <div className="gif-section">
-      <div className="gif-grid">
-        {gifs.map((gif, index) => (
-          <div key={index} className="gif-item">
-            <img src={gif} alt={`GIF ${index + 1}`} className="gif-image" />
-          </div>
-        ))}
+    <div className="gif-wrapper">
+      {/* Background Video */}
+      <video className="background-video" autoPlay loop muted>
+        <source src="/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div className="gif-section">
+        <div className="gif-grid">
+          {gifs.map((gif, index) => (
+            <div key={index} className="gif-item">
+              <img src={gif} alt={`GIF ${index + 1}`} className="gif-image" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

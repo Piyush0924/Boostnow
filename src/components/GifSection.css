@@ -1,3 +1,23 @@
+/* Wrapper to hold background and content */
+.gif-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Gif Section */
 .gif-section {
   position: relative;
   min-height: 100vh;
@@ -6,8 +26,10 @@
   justify-content: center;
   background: rgba(255, 255, 255, 0.1); /* Lightened background */
   padding: 50px 20px;
+  z-index: 1; /* Ensures GIFs appear above the video */
 }
 
+/* Grid for GIFs */
 .gif-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -20,13 +42,8 @@
 .gif-image {
   width: 100%;
   height: auto;
-  border-radius: 20px; /* Curved edges on all sides */
-  transition: opacity .5s ease-in-out;
-}
-
-/* Lower opacity for the last row */
-.gif-item:nth-child(n) .gif-image {
-  opacity: 1;
+  border-radius: 20px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* Soft Glow Effect */
