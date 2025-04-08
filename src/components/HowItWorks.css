@@ -1,8 +1,12 @@
-/* Apply Manrope font globally */
+/* Font */
 body {
   font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Main section */
 .how-it-works-section {
   position: relative;
   padding: 120px 16px 100px;
@@ -23,6 +27,7 @@ body {
   transform: translateY(0);
 }
 
+/* Background Video */
 .background-video {
   position: absolute;
   top: 0;
@@ -34,6 +39,7 @@ body {
   opacity: 0.12;
 }
 
+/* Container */
 .how-it-works-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -44,19 +50,20 @@ body {
   width: 100%;
 }
 
+/* Title */
 .how-it-works-title {
   font-size: 3rem;
   font-weight: 800;
   color: #6963dd;
   margin-bottom: 16px;
   line-height: 1.2;
-  font-family: 'Manrope', sans-serif;
 }
 
 .how-it-works-title span {
   color: #0ea5e9;
 }
 
+/* Subtitle */
 .how-it-works-subtitle {
   font-size: 1.1rem;
   color: #475569;
@@ -64,9 +71,9 @@ body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Manrope', sans-serif;
 }
 
+/* Steps Grid */
 .how-it-works-steps {
   display: flex;
   flex-direction: row;
@@ -75,12 +82,14 @@ body {
   padding: 0 40px;
   width: 100%;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
+/* Card */
 .how-it-works-card {
-  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
-  backdrop-filter: blur(20px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(20px); /* Safari support */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 40px 24px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
@@ -91,15 +100,15 @@ body {
   text-align: center;
   min-width: 220px;
   flex: 1;
-  font-family: 'Manrope', sans-serif;
+  scroll-snap-align: start;
 }
-
 
 .how-it-works-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* Step Label */
 .step-number {
   color: #7c3aed;
   font-weight: 600;
@@ -107,6 +116,7 @@ body {
   font-size: 1rem;
 }
 
+/* Icon */
 .icon-wrapper {
   background: #e0f2fe;
   border-radius: 20px;
@@ -123,6 +133,7 @@ body {
   height: 33px;
 }
 
+/* Card Title */
 .step-title {
   font-size: 1.125rem;
   font-weight: 600;
@@ -130,16 +141,18 @@ body {
   color: #1f2937;
 }
 
+/* Card Description */
 .step-desc {
   font-size: 0.95rem;
   color: #6b7280;
   line-height: 1.5;
 }
 
-/* Responsive Design */
+/* Responsiveness */
 @media (max-width: 1024px) {
   .how-it-works-steps {
     padding: 0 20px;
+    gap: 30px;
   }
 
   .how-it-works-title {
@@ -151,9 +164,19 @@ body {
   .how-it-works-steps {
     padding: 0 10px;
     gap: 20px;
+    overflow-x: scroll;
   }
 
   .how-it-works-card {
     padding: 30px 15px;
+    min-width: 260px;
+  }
+
+  .how-it-works-title {
+    font-size: 2rem;
+  }
+
+  .how-it-works-subtitle {
+    font-size: 1rem;
   }
 }
