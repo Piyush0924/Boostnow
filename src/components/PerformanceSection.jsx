@@ -10,28 +10,21 @@ export default function PerformanceSection() {
 
   return (
     <section className="w-full h-screen py-16 bg-gradient-to-br from-white to-blue-50/50 overflow-hidden relative">
-      <video
+     <video
         autoPlay
         muted
         loop
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1] "
       >
-        <source src="/assets/background.mp4" type="video/mp4" />
+        <source src="/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
+
+
       <div className="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row">
         {/* Section Label */}
-        <h2 className="uppercase text-indigo-800 font-semibold tracking-widest mb-6 relative inline-block">
-          <span className="relative inline-block">
-            <span className="relative z-10">PERFORMANCE</span>
-            <span
-              className="absolute bottom-0 left-0 h-[2px] pointer-events-none"
-              style={{ width: "30%", backgroundColor: "rgb(106, 113, 168)" }}
-            ></span>
-          </span>
-        </h2>
+       
 
         {/* Middle Content */}
         <div className="lg:w-1/2 ml-64">
