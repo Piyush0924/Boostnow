@@ -18,7 +18,7 @@ const Footer = () => {
       {/* 3. Footer */}
       <footer
         className="relative text-white pt-10 pb-0 overflow-hidden "
-        style={{ background: "linear-gradient(145deg, #c9c6ff, #7c64f5)" }}
+        style={{ background: "linear-gradient(145deg, #7c64f5)" }}
 >
         {/* Footer Content */}
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6 px-4 sm:px-8 lg:px-16 pb-20">
