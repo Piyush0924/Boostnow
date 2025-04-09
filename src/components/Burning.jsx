@@ -53,7 +53,7 @@ const Burning = () => {
         <div className="burning-container">
           <h4 className="burning-subtitle">F A Q</h4>
           <h2 className="burning-title">
-            <span className="highlight">Burning</span> Questions About <span className="highlight">Rescale</span>
+            <span className="highlight">Burning</span> Questions About <span className="highlight">BoostNowAI</span>
           </h2>
           <p className="burning-description">
             Simple answers to make things clear.
