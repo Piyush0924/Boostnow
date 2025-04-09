@@ -33,18 +33,19 @@ const ScrollingBanner = () => {
       </video>
 
       {/* Scrolling Banner */}
-      <div className="py-6 border-y border-gray-300 bg-white/60 backdrop-blur-md relative z-10">
-        <div className="whitespace-nowrap flex items-center gap-20 animate-scroll-left px-6">
-          {items.map((item, index) => (
-            <div key={index} className="flex items-center gap-3 px-6">
-              <StarIcon className="w-6 h-6 animate-scale-rotate" />
-              <span className="text-[#4c5ac1] font-bold text-lg sm:text-xl tracking-wide">
-                {item}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <div className="overflow-hidden relative px-3 mt-5">
+  <div className="flex gap-10 animate-scroll-logos whitespace-nowrap">
+    {[1, 2, 3, 4, 5, 6].map((num) => (
+      <img
+        key={num}
+        src={`${num}.svg`}
+        alt={`company-${num}`}
+        className="h-10 object-contain"
+      />
+    ))}
+  </div>
+</div>
+
     </div>
   );
 };

@@ -15,7 +15,7 @@ export default function PerformanceSection() {
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-2]"
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-2] opacity-5"
       >
         <source src="/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.

@@ -121,9 +121,9 @@ const PricingSection = () => {
           Trusted by Market Leaders
         </span>
 
-        <div className="overflow-hidden">
+        <div className="overflow-">
           <div className="flex animate-slide gap-10 items-center w-max whitespace-nowrap">
-            {[1, 2, 3, 4, 5, 6, 1, 2, 3].map((num, i) => (
+            {[1, 2, 3, 4, 5, 6, ].map((num, i) => (
               <img
                 key={i}
                 src={`${num}.svg`}

@@ -3,7 +3,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{js,jsx,ts,tsx}",   
+    "./pages/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
     "./app/**/*.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        // if you want to extend fontFamily here
+        // Extend your fonts here if needed
         // sans: ['YourFont', ...fontFamily.sans],
       },
       zIndex: {
@@ -30,13 +30,6 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      animation: {
-        scroll: "scroll 30s linear infinite",
-        "scroll-left": "scrollLeft 25s linear infinite",
-        "scale-rotate": "scaleRotate 2s ease-in-out infinite",
-        float: "float 5s ease-in-out infinite",
-        "float-slow": "float 6s ease-in-out infinite",
       },
       keyframes: {
         slide: {
@@ -59,10 +52,19 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
         },
+        'scroll-logos': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
-
       animation: {
         slide: 'slide 20s ease-in-out infinite',
+        scroll: 'scroll 30s linear infinite',
+        'scroll-left': 'scrollLeft 25s linear infinite',
+        'scale-rotate': 'scaleRotate 20s ease-in-out infinite',
+        float: 'float 10s ease-in-out infinite',
+        'float-slow': 'float 6s ease-in-out infinite',
+        'scroll-logos': 'scroll-logos 40s linear infinite',
       },
     },
   },
