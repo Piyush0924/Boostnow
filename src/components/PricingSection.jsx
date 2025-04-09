@@ -4,13 +4,17 @@ import "./PricingSection.css";
 const PricingSection = () => {
   const [isAnnual, setIsAnnual] = useState(false);
 
-  // Pricing Data
   const pricingPlans = [
     {
       name: "Essential",
-      features: ["Core Analytics", "Limited Campaigns", "Community Access", "Standard Support"],
+      features: [
+        "Core Analytics",
+        "Limited Campaigns",
+        "Community Access",
+        "Standard Support",
+      ],
       monthlyPrice: "$29",
-      annualPrice: "$232", // 20% Discount
+      annualPrice: "$232",
       buttonText: "Purchase",
     },
     {
@@ -43,185 +47,101 @@ const PricingSection = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="pricing-section">
-      <h1 className="pricing-title">Explore Our Plans</h1>
-      <p className="pricing-subtitle">
-        Super flexible monthly plans and cost-effective annual subscriptions.
-      </p>
-
-      {/* Toggle Button */}
-      <div className="toggle-container">
-        <span className={!isAnnual ? "active" : ""}>Monthly</span>
-        <button onClick={() => setIsAnnual(!isAnnual)} className="toggle-button">
-          <div className={`toggle-circle ${isAnnual ? "active" : ""}`}></div>
-          {isAnnual && <span className="discount-badge">Save 20%</span>}
-        </button>
-        <span className={isAnnual ? "active" : ""}>Annual</span>
-      </div>
-
-      {/* Pricing Cards */}
-      <div className="pricing-cards">
-        {pricingPlans.map((plan, index) => (
-          <div key={index} className="pricing-card">
-            <h3 className="plan-name">{plan.name}</h3>
-            <ul className="plan-features">
-              {plan.features.map((feature, i) => (
-                <li key={i}>✔ {feature}</li>
-              ))}
-            </ul>
-            <p className="plan-price">{isAnnual ? plan.annualPrice : plan.monthlyPrice}<span>/month</span></p>
-            <button className="purchase-btn">{plan.buttonText}</button>
-          </div>
-        ))}
-=======
-    <div className="relative w-full text-center py-16 px-4 overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-1] "
-      >
-        <source src="/background.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Headings */}
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-[#8364e8] to-[#00aefd] bg-clip-text text-transparent leading-tight">
+    <div className="py-16 px-6 bg-gray-50 text-center">
+      {/* Heading */}
+      <h1 className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#8364e8] to-[#00aefd]">
         Explore Our Plans
       </h1>
-      <p className="text-gray-800 text-xl mt-4 mb-12 font-medium max-w-xl mx-auto">
+
+      {/* Subheading */}
+      <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
         Super flexible monthly plans and cost-effective annual subscriptions.
       </p>
 
       {/* Toggle Switch */}
-      <div className="flex items-center justify-center gap-4 text-lg font-bold text-gray-800 mb-10 relative">
-        <span className={`${!isAnnual ? "text-blue-400" : ""}`}>Monthly</span>
+      <div className="flex items-center justify-center gap-4 mb-10">
+        <span className={!isAnnual ? "font-semibold" : "text-gray-500"}>
+          Monthly
+        </span>
         <button
           onClick={() => setIsAnnual(!isAnnual)}
-          className="relative w-20 h-9 bg-gray-100 rounded-full flex items-center justify-start transition-all"
+          className="relative inline-flex items-center h-6 w-12 bg-gray-300 rounded-full transition"
         >
-          <div
-            className={`w-7 h-7 bg-white rounded-full absolute top-1 left-1 transition-all ${
-              isAnnual ? "translate-x-[2.5rem] bg-blue-500" : ""
+          <span
+            className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform ${
+              isAnnual ? "translate-x-6" : "translate-x-0"
             }`}
-          />
-          {isAnnual && (
-            <span className="absolute -top-5 -right-10 text-gray-400 text-xs bg-blue-600 px-2 py-1 rounded-full">
-              Save 20%
-            </span>
-          )}
+          ></span>
         </button>
-        <span className={`${isAnnual ? "text-blue-400" : ""}`}>Annual</span>
+        <span className={isAnnual ? "font-semibold" : "text-gray-500"}>
+          Annual <span className="text-xs text-green-600">(Save 20%)</span>
+        </span>
       </div>
 
       {/* Pricing Cards */}
-     {/* Pricing Cards */}
-<div className="flex flex-wrap justify-center gap-8">
-  {pricingPlans.map((plan, index) => (
-    <div
-      key={index}
-      className="text-gray-800 border border-gray-300 backdrop-blur-md p-6 rounded-xl shadow-md text-center min-w-[270px] transition-transform transform hover:scale-105 w-full max-w-sm h-[400px] flex flex-col justify-between bg-white/40"
-    >
-      {/* Top 70%: Title & Features */}
-      <div className="flex-1">
-        {/* Title */}
-        <h3 className="text-xl font-bold text-gray-800">{plan.name}</h3>
+      <div className="flex flex-wrap justify-center gap-8 px-4 py-10">
+        {pricingPlans.map((plan, index) => (
+          <div
+            key={index}
+            className="w-full max-w-sm h-[440px] flex flex-col justify-between items-center bg-white/40 border border-gray-200 backdrop-blur-md p-6 rounded-2xl shadow-lg text-center text-gray-800 transition-all duration-300 transform hover:scale-105"
+          >
+            {/* Top Section */}
+            <div className="flex-1 flex flex-col items-center">
+              <h3 className="text-2xl font-semibold mb-4 text-[#1e1e1e]">
+                {plan.name}
+              </h3>
+              <ul className="space-y-2 text-gray-700 text-left">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="text-green-500">✔</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-        {/* Features */}
-        <div className="mt-4 space-y-2 text-gray-800">
-          <ul>
-            {plan.features.map((feature, i) => (
-              <li key={i}>✔ {feature}</li>
-            ))}
-          </ul>
-        </div>
->>>>>>> f8be1c6aea192652399077df077172ffda9424ee
+            {/* Bottom Section */}
+            <div className="mt-6 flex flex-col items-center">
+              <div className="relative inline-block mb-3 text-3xl font-bold text-[#8364e8]">
+                {isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                <span className="text-sm text-gray-500">/month</span>
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[#8364e8]/50" />
+              </div>
+              <button className="mt-2 px-6 py-2 text-white font-semibold rounded-full bg-gradient-to-r from-[#8364e8] to-[#00aefd] hover:from-[#00aefd] hover:to-[#8364e8] transition-all duration-300 shadow-md">
+                {plan.buttonText}
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
-
-      {/* Bottom 30%: Price & Button */}
-      <div className="mt-5">
-        {/* Pricing */}
-        <div className="text-3xl font-bold text-[#8364e8] mb-1">
-          {isAnnual ? plan.annualPrice : plan.monthlyPrice}
-          <span className="text-sm text-gray-500">/month</span>
-        </div>
-
-        {/* Button */}
-        <button className="mt-2 px-6 py-2 text-gray-800 font-bold rounded-full bg-gradient-to-r from-[#8364e8] to-[#00aefd] hover:from-[#00aefd] hover:to-[#8364e8] transition-all transform hover:scale-105 shadow-md">
-          {plan.buttonText}
-        </button>
-      </div>
-    </div>
-  ))}
-</div>
-
-
 
       {/* Trusted Companies */}
-<<<<<<< HEAD
-      <div className="trusted-companies">
-      <span>TRUSTED BY MARKET LEADERS</span>
-      <div className="logo-slider">
-        <div className="company-logos">
-          <img src="1.svg" />
-          <img src="2.svg" />
-          <img src="3.svg" />
-          <img src="4.svg" />
-          <img src="5.svg" />
-          <img src="6.svg" />
-          {/* <!-- Duplicate for seamless looping --> */}
-          <img src="1.svg" />
-          <img src="2.svg" />
-          <img src="3.svg" />
-          <img src="4.svg" />
-          <img src="5.svg" />
-          <img src="6.svg" />
-=======
-      <div className="mt-20 text-center w-full overflow-hidden">
-        <span className="block text-sm font-bold text-slate-800 mb-6 tracking-widest">
-          TRUSTED BY MARKET LEADERS
+      <div className="mt-16">
+        <span className="text-gray-500 uppercase text-xs tracking-wide block mb-4">
+          Trusted by Market Leaders
         </span>
-        <div className="w-[60%] mx-auto overflow-hidden whitespace-nowrap">
-          <div className="flex gap-20 animate-scroll w-max">
-            {[...Array(2)].map((_, dup) =>
-              ["1.svg", "2.svg", "3.svg", "4.svg", "5.svg", "6.svg"].map(
-                (logo, i) => (
-                  <img
-                    key={`${dup}-${i}`}
-                    src={logo}
-                    alt={`logo-${i}`}
-                    className="h-8 w-auto transition-transform hover:scale-110"
-                  />
-                )
-              )
-            )}
+
+        <div className="overflow-hidden">
+          <div className="flex animate-slide gap-10 items-center w-max whitespace-nowrap">
+            {[1, 2, 3, 4, 5, 6, 1, 2, 3].map((num, i) => (
+              <img
+                key={i}
+                src={`${num}.svg`}
+                alt={`company-${num}`}
+                className="h-10 object-contain"
+              />
+            ))}
           </div>
->>>>>>> f8be1c6aea192652399077df077172ffda9424ee
         </div>
       </div>
-    </div>
 
-    <div className="plan-help">
-      <span className="plan-question">Unsure which plan to pick?</span>
-      <button className="expert-button">Ask Your Expert</button>
-    </div>
-
-
-
-<<<<<<< HEAD
-=======
       {/* Help Section */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-20">
-        <span className="text-lg font-bold text-slate-800">
+      <div className="mt-12">
+        <p className="text-lg font-medium mb-2">
           Unsure which plan to pick?
-        </span>
-        <button className="px-6 py-2 text-slate-800 font-bold rounded-full bg-gradient-to-r from-[#8364e8] to-[#00aefd] hover:from-[#00aefd] hover:to-[#8364e8] transition-all transform hover:scale-105 shadow-md">
-          Ask Your Expert
-        </button>
+        </p>
+        {/* Additional help UI can go here */}
       </div>
->>>>>>> f8be1c6aea192652399077df077172ffda9424ee
     </div>
   );
 };

@@ -39,6 +39,10 @@ module.exports = {
         "float-slow": "float 6s ease-in-out infinite",
       },
       keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
         scroll: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
@@ -55,6 +59,10 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
         },
+      },
+
+      animation: {
+        slide: 'slide 20s ease-in-out infinite',
       },
     },
   },
