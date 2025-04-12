@@ -47,7 +47,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className="py-16 px-6 bg-gray-50 text-center">
+    <div className="py-16 px-6 bg-transparent text-center">
       {/* Heading */}
       <h1 className="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#8364e8] to-[#00aefd]">
         Explore Our Plans
